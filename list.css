@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-div {
+  height: 100vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upper h1 {
+  text-align: center;
+  position: relative;
+  font-size: 60px;
+}
+
+.upper h1::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  right: 110%;
+}
+
+.upper h1::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 110%;
+}
+
+.lower {
+  text-align: center;
+}
+
+.lower a {
+  text-decoration: none;
+}
+
+.lower svg:nth-last-child(2) {
+  margin-right: 10px;
+}
+
+.lower svg:nth-last-child(1) {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.lower .back {
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.lower button {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.lower span:nth-child(1) {
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 15px;
+  height: 35px;
+  width: 35px;
+}
+
+.card {
+  position: relative;
+  height: 55vh;
+  width: 30vw;
+  border: 1px solid red;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+  margin: auto;
+}
+
+.card hr {
+  margin-left: 32%;
+}
+
+.completed-task {
+  color: red;
+  text-decoration-line: line-through;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 28px;
+  margin: 20px 0px;
+}
+
+.card h1 {
+  color: red;
+  text-align: center;
+  margin: 40px 0px 20px 0px;
+  font-weight: 300;
+}
+
+.card span input {
+  margin: 0px 10px;
+  height: 20px;
+  width: 20px;
+  outline: none;
+}
+
+.card span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -80px;
+}
+
+.card span label {
+  font-size: 24px;
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.overlay:target {
+  display: flex;
+}
+
+.popup {
+  height: 300px;
+  width: 450px;
+  border: 1px solid red;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.popup .new-list {
+  color: red;
+}
+
+.popup .input {
+  width: 80%;
+}
+
+.popup .input input {
+  padding: 15px 10px;
+  border: 1px solid red;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin: 30px 0px;
+  outline: none;
+}
+
+.popup button {
+  background: red;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
